@@ -268,7 +268,7 @@ translation = rb.__("file", "files", 30);
 
 Even more examples
 ------------------
-Please refer to the [test spec]((https://github.com/belexos/islyngten/blob/master/spec/IslyngtenSpec.js)) for more examples.
+Please refer to the [test spec](https://github.com/belexos/islyngten/blob/master/spec/IslyngtenSpec.js) for more examples.
 
 
 Testing

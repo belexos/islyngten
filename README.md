@@ -313,6 +313,9 @@ Support
 
 Changelog
 ---------
+v1.0.2
+* Update npm modules.
+
 v1.0.1
 * Update npm modules.
 

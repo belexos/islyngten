@@ -1,7 +1,7 @@
 /**
- * islyngten - JavaScript library supplying I18N translation support for Node.js and the Browser.
+ * islyngten - JavaScript library supplying I18N translation support for Node.js and the browser.
  *
- * @copyright: Copyright (c) 2013-present, Belexos GmbH
+ * @copyright: Copyright (c) 2013-present, Belexos
  *
  * @author: Br00ze <br00ze@belexos.com>
  *
@@ -9,12 +9,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+
 (function(window)
 {
 	if (typeof module === 'object' && module && typeof module.exports === 'object')
 	{
-		'use strict';
-
 		module.exports = Islyngten;
 	}
 	else
@@ -25,6 +24,8 @@
 
 	function Islyngten()
 	{
+		'use strict';
+
 		const _resources = {};
 
 		function ResourceBundle(context, locale, resources)
@@ -167,6 +168,6 @@
 			var contextResources = _resources[context];
 
 			return new ResourceBundle(context, locale, contextResources ? contextResources[locale] : null);
-		}
+		};
 	}
 })(this);

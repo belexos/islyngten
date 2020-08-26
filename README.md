@@ -1,7 +1,7 @@
 Islyngten
 =========
 
-`Islyngten` is a tiny JavaScript library supplying I18N translation support for Node.js and the Browser.
+`Islyngten` is a tiny JavaScript library supplying I18N translation support for Node.js and the browser.
 It provides simple, yet powerful solutions for multiple plural forms and interpolation. 
 `Islyngten` has no dependencies.
 
@@ -33,11 +33,11 @@ const i18n = new Islyngten();
 ```
 
 ### Browser
-`Islyngten` has no dependencies, which makes it easy to include in a Browser.
+`Islyngten` has no dependencies, which makes it easy to include in a browser.
 
 You can download the latest release from the repository
-* [`islyngten.js`](https://github.com/belexos/islyngten/blob/master/islyngten.js) unminified including comments, 3.4 kB
-* [`islyngten.min.js`](https://github.com/belexos/islyngten/blob/master/islyngten.min.js) minified version, 1.15 kB
+* [`islyngten.js`](https://github.com/belexos/islyngten/blob/master/islyngten.js) unminified, including comments
+* [`islyngten.min.js`](https://github.com/belexos/islyngten/blob/master/islyngten.min.js) minified version
 
 Use a script tag to directly add `Islyngten` to the global scope.
 
@@ -189,9 +189,9 @@ translation = rb.__("The list contains $count item", "The list contains $count i
 
 ### Multiple plural forms
 
-The previous examle showed an easy way to support simple plural forms by using the nget() [ __(), tt() ] methods.
+The previous examle showed an easy way to support simple plural forms by using the `nget()` [` __()`, `tt()` ] methods.
 But what, if you need to translate in other languages where multiple plural forms exist? 
-For example, in Polish, the word ‘file’ pluralises like this: 
+For example, in Polish, the word "file" pluralises like this: 
 * 1 plik
 * 2,3,4 pliki
 * 5-21 plików
@@ -273,12 +273,19 @@ Please refer to the [test spec](https://github.com/belexos/islyngten/blob/master
 
 Testing
 -------
-We are using [Jasmine testing framework](https://jasmine.github.io/index.html) and [Istanbul test coverage framework](https://istanbul.js.org/).
+We use 
+* [JSHint](https://jshint.com/) for static code analysis.
+* [Jasmine testing framework](https://jasmine.github.io/index.html) for testing.
+* [Karma test runner](https://karma-runner.github.io/latest/index.html) for testing in the browser.
+* [Istanbul test coverage framework](https://istanbul.js.org/) for tracking test coverage.
 
+Steps to be taken
 * Clone or download the repository.
-* Change into project directory.
+* Change into the project directory.
 * Use `npm install` to install all development dependencies.
+* Use `npm runt lint` to run static code analysis. 
 * Use `npm test` to run the tests. 
+* Use `npm run coverage` to track test coverage. 
 * The output should display successful execution results and a code coverage map.
 
 
@@ -286,7 +293,7 @@ Build
 -----
 * Clone or download the repository.
 * Change into project directory.
-* Use `grunt` in project directory to build `islyngten.min.js` from `islyngten.js`.
+* Use `npm run build` in project directory to build `islyngten.min.js` from `islyngten.js`.
 
 
 Contribution
@@ -298,11 +305,14 @@ Pull requests are welcome.
 
 Issues
 ------
-We use GitHub issues to track bugs. Please ensure your bug description is clear and has sufficient instructions to be able to reproduce the issue.
+We use GitHub issues to track bugs. Please ensure your bug description is clear and has sufficient instructions to be 
+able to reproduce the issue.
 
-The absolute best way to report a bug is to submit a pull request including a new failing test which describes the bug. When the bug is fixed, your pull request can then be merged.
+The absolute best way to report a bug is to submit a pull request including a new failing test which describes the bug. 
+When the bug is fixed, your pull request can then be merged.
 
-The next best way to report a bug is to provide a reduced test case on jsFiddle or jsBin or produce exact code inline in the issue which will reproduce the bug.
+The next best way to report a bug is to provide a reduced test case on jsFiddle or jsBin or produce exact code inline 
+in the issue which will reproduce the bug.
 
 
 Support
@@ -313,6 +323,15 @@ Support
 
 Changelog
 ---------
+v1.1.0
+* Update npm modules.
+* Update and extend test environment.
+* Add static code analysis tool JSHint.
+* Add Karma test runner.
+* Fix JSHint issues.
+* Replace uglify-js by terser for minification.
+* Update README.
+
 v1.0.3
 * Update npm modules.
 
@@ -328,4 +347,4 @@ v1.0.0
 
 License
 -------
-Copyright (c) 2013-present, Belexos GmbH. `Islyngten` is licensed under the [MIT License](https://github.com/belexos/islyngten/blob/master/LICENSE).
+Copyright (c) 2013-present, Belexos. `Islyngten` is licensed under the [MIT License](https://github.com/belexos/islyngten/blob/master/LICENSE).
